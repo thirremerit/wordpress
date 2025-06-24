@@ -1,16 +1,19 @@
+
 <?php
 
-function erit_enqueue_scripts() {
-    wp_enqueue_style('main-style',get_stylesheet_uri());
 
+function mytheme_enqueue_style() {
+    wp_enqueue_style( 'mytheme-style', get_stylesheet_uri() ); 
 }
-//add_action( 'wp_enqueue_scipts'.'ds_enqueue_scripts)' );
+add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_style' );
 
 
-function erit_setup(){
-    add_theme_support('menus');
-    register_nav_menu( 'primary','Primary Navigation');
-}
-add_action( 'init','erit_setup');
+add_theme_support('post-thumbnails');
 
-?>                                                       
+
+add_theme_support('post-formats' ,array('aside','image','video'));
+
+
+
+
+?>
