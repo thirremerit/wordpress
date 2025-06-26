@@ -1,37 +1,48 @@
-<?php get_header();?>
- <h1> this is the theme </h1>
+  <?php wp_head(); ?>
+<h1>This our DS theme</h1>
+
 
 <?php
 
-    if(have_posts() ):
-        while(have_posts(   )):the_post(  );?>
-            <h2><?php  the_title();?></h2>
-            <p><?php  the_content( );?><p>
-        <?php  endwhile;
 
-
-    endif;
- 
- 
+if(have_posts()):
+    while( have_posts(  )):the_post(  );?>
+    <h2><?php  the_title(); ?></h2>
+    <p><?php  the_content(); ?></p>
+    <?php   endwhile;
+endif;
 ?>
-
-<?php if (have_posts( )): while(have_posts()):the_post();?>
-
+<?php if (have_posts()): while(have_posts()):the_post();?>
+   
 <h2><?php the_title(); ?></h2>
 
-<div class="thumbnail-img">
-    <?php the_post_thumbnail( 'thumbnail'); // 150x150 ?>
-    <?php the_post_thumbnail( 'medium'); // 300x300 ?>
-    <?php the_post_thumbnail( 'large'); // 1024x1024 ?>
-    <?php the_post_thumbnail( 'full'); // origjinal size ?>
 
+<div class="thumbnail-img">
+    <?php the_post_thumbnail('thumbnail'); //  150x150?>
+    <?php the_post_thumbnail('medium'); //  150x150?>
+    <?php the_post_thumbnail('large'); //  150x150?>
+    <?php the_post_thumbnail('full'); //  150x150?>
 </div>
 
-<p><?php the_content() ?></p>
 
-<?php endwhile; endif; ?>
-
+    
 
 
 
- <?php get_footer();?>
+<p><?php the_content()?></p>
+
+
+<?php endwhile; endif;?>
+
+
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<?php wp_footer(); ?>
