@@ -1,0 +1,120 @@
+/*
+Theme Name: Recipe Theme
+Author: Your Name
+Version: 1.2
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* light blueish cream */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header, footer {
+    background-color: #1E90FF; /* main blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Forms */
+form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: #1E90FF; /* main blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #187bcd;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+.recipe-card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card h2 {
+    margin-top: 0;
+    color: #1E90FF;
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.recipe-card p {
+    line-height: 1.5;
+}
+
+
+h2 {
+    text-align: center;
+    color: #1E90FF; 
+    margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+    form, .recipe-card {
+        margin: 15px;
+        padding: 15px;
+    }
+}
