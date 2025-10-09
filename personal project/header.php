@@ -1,10 +1,12 @@
-<header>
-    <h1>Recipe Finder</h1>
-    <div style="margin-top:10px;">
-        <?php if(is_user_logged_in()): ?>
-            <a href="<?php echo wp_logout_url(home_url()); ?>">Logout</a>
-        <?php else: ?>
-            <a href="<?php echo site_url('/login'); ?>">Login / Signup</a>
-        <?php endif; ?>
-    </div>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php wp_title('|', true, 'right'); ?></title>
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+<header class="site-header">
+    <h1 style="text-align:center; color:#1a73e8;">Recipe Finder</h1>
 </header>

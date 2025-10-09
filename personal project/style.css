@@ -1,120 +1,86 @@
 /*
-Theme Name: Recipe Theme
-Author: Your Name
-Version: 1.2
+Theme Name: Recipe Finder
 */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8; /* light blueish cream */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-header, footer {
-    background-color: #1E90FF; /* main blue */
-    color: white;
-    padding: 20px;
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+    color: #1a73e8;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Forms */
-form {
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-form input[type="text"],
-form textarea,
-form input[type="file"] {
+input, textarea, button {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 14px;
 }
 
-form textarea {
-    min-height: 80px;
-    resize: vertical;
-}
-
-form button {
-    padding: 12px 25px;
-    background-color: #1E90FF; /* main blue */
+button {
+    background-color: #1a73e8;
     color: white;
     border: none;
-    border-radius: 6px;
     cursor: pointer;
-    font-size: 1em;
+    transition: background 0.3s;
 }
 
-form button:hover {
-    background-color: #187bcd;
+button:hover {
+    background-color: #155bb5;
 }
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
 
 .recipe-card {
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
-
-.recipe-card:hover {
-    transform: translateY(-5px);
-}
-
-.recipe-card h2 {
-    margin-top: 0;
-    color: #1E90FF;
+    background: #e9f1ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .recipe-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.recipe-card p {
-    line-height: 1.5;
-}
-
-
-h2 {
+.error {
+    color: red;
     text-align: center;
-    color: #1E90FF; 
-    margin-top: 40px;
 }
 
+.success {
+    color: green;
+    text-align: center;
+}
 
-@media (max-width: 768px) {
-    form, .recipe-card {
-        margin: 15px;
-        padding: 15px;
-    }
+.auth-forms {
+    text-align: center;
+}
+
+.auth-forms form {
+    margin-top: 20px;
+}
+
+.site-footer {
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border-top: 2px solid #155bb5;
 }
