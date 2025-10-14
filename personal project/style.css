@@ -1,6 +1,4 @@
-/*
-Theme Name: Recipe Finder
-*/
+
 
 body {
     font-family: Arial, sans-serif;
@@ -83,4 +81,18 @@ button:hover {
     padding: 15px;
     font-size: 14px;
     border-top: 2px solid #155bb5;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
 }

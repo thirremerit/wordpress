@@ -1,7 +1,6 @@
 <?php
 get_header();
 
-// Process registration/login BEFORE any HTML output
 if (isset($_POST['register_user'])) {
     $username = sanitize_user($_POST['username']);
     $email = sanitize_email($_POST['email']);
@@ -41,7 +40,6 @@ if (isset($_POST['login_user'])) {
     ?>
         <h2>Welcome, <?php echo esc_html($current_user->user_login); ?>!</h2>
 
-        <!-- Add Recipe Form -->
         <div class="recipe-form">
             <h3>Add a Recipe</h3>
             <form method="post" enctype="multipart/form-data">
@@ -54,7 +52,6 @@ if (isset($_POST['login_user'])) {
             </form>
         </div>
 
-        <!-- Search Form -->
         <div class="search-form">
             <h3>Search Recipes</h3>
             <form method="get">
@@ -64,7 +61,6 @@ if (isset($_POST['login_user'])) {
         </div>
 
         <?php
-        // Recipe submission logic
         if (isset($_POST['add_recipe'])) {
             $name = sanitize_text_field($_POST['recipe_name']);
             $ingredients = sanitize_textarea_field($_POST['recipe_ingredients']);
@@ -102,7 +98,6 @@ if (isset($_POST['login_user'])) {
             }
         }
 
-        // Recipe search logic
         if (isset($_GET['search_query'])) {
             $search = sanitize_text_field($_GET['search_query']);
             $args = [

@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Add Recipe */get_header();
+get_header();
 
 rf_handle_add_recipe_form();
 ?>
